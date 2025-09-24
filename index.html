@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
     <style>
         :root {
             --primary: #1a2238;
@@ -143,7 +144,7 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center animate-fadein delay-200">
                     <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl group">
-                        <img src="headshot.webp" alt="Clément Vinciguerra" class="w-full h-full object-cover">
+                        <img src="images/headshot.webp" alt="Clément Vinciguerra" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <div class="text-white text-center">
                                 <p class="text-sm" data-i18n="hero.based">Based in</p>
@@ -162,7 +163,7 @@
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center animate-fadein">
                     <div class="relative w-64 rounded-lg overflow-hidden shadow-xl">
-                        <img src="profile.webp" alt="Clément working" class="w-full h-full object-cover">
+                        <img src="images/profile.webp" alt="Clément working" class="w-full h-full object-cover">
                     </div>
                 </div>
                 <div class="md:w-2/3 md:pl-12 animate-fadein delay-100">
@@ -244,7 +245,7 @@
                 <div class="project-card h-80 rounded-xl overflow-hidden shadow-md animate-fadein">
                     <div class="project-inner relative w-full h-full">
                         <div class="project-front absolute w-full h-full">
-                            <img src="project1.webp" alt="Offline Payment Solution" class="w-full h-full object-cover">
+                            <img src="images/project1.webp" alt="Offline Payment Solution" class="w-full h-full object-cover">
                             <div class="absolute inset-0 project-overlay-strong flex flex-col justify-end p-6">
                                 <h3 class="text-xl font-bold text-white" data-i18n="projects.p1.title">Offline Payment Solution</h3>
                                 <p class="text-gray-200" data-i18n="projects.p1.stack">Node.js, Raspberry Pi</p>
@@ -265,7 +266,7 @@
                 <div class="project-card h-80 rounded-xl overflow-hidden shadow-md animate-fadein delay-100">
                     <div class="project-inner relative w-full h-full">
                         <div class="project-front absolute w-full h-full">
-                            <img src="project2.webp" alt="E-Learning Platform" class="w-full h-full object-cover">
+                            <img src="images/project2.webp" alt="E-Learning Platform" class="w-full h-full object-cover">
                             <div class="absolute inset-0 project-overlay-strong flex flex-col justify-end p-6">
                                 <h3 class="text-xl font-bold text-white" data-i18n="projects.p2.title">Interactive E-Learning Platform</h3>
                                 <p class="text-gray-200" data-i18n="projects.p2.stack">Angular, Nest.js, Firebase</p>
@@ -287,7 +288,7 @@
                 <div class="project-card h-80 rounded-xl overflow-hidden shadow-md animate-fadein delay-200">
                     <div class="project-inner relative w-full h-full">
                         <div class="project-front absolute w-full h-full">
-                            <img src="project3.webp" alt="Sales Analytics Dashboard" class="w-full h-full object-cover">
+                            <img src="images/project3.webp" alt="Sales Analytics Dashboard" class="w-full h-full object-cover">
                             <div class="absolute inset-0 project-overlay-strong flex flex-col justify-end p-6">
                                 <h3 class="text-xl font-bold text-white" data-i18n="projects.p3.title">Sales Analytics Dashboard</h3>
                                 <p class="text-gray-200" data-i18n="projects.p3.stack">Python, SQL, Tableau</p>
@@ -309,7 +310,7 @@
                 <div class="project-card h-80 rounded-xl overflow-hidden shadow-md animate-fadein delay-300">
                     <div class="project-inner relative w-full h-full">
                         <div class="project-front absolute w-full h-full">
-                            <img src="project4.webp" alt="Real-Time Flight Mapping" class="w-full h-full object-cover">
+                            <img src="images/project4.webp" alt="Real-Time Flight Mapping" class="w-full h-full object-cover">
                             <div class="absolute inset-0 project-overlay-strong flex flex-col justify-end p-6">
                                 <h3 class="text-xl font-bold text-white" data-i18n="projects.p4.title">Real-Time Flight Mapping</h3>
                                 <p class="text-gray-200" data-i18n="projects.p4.stack">Vue.js, Node.js</p>
@@ -349,46 +350,10 @@
                         <textarea id="message" name="message" rows="5" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
                     </div>
                     <button type="submit" class="w-full py-3 gradient-bg text-white rounded-lg font-semibold hover:shadow-lg transition-all" data-i18n="contact.send">Send</button>
-<script type="module">
-import { translations } from './dico.js';
-// Mobile menu toggle
-document.getElementById('menu-btn').onclick = function() {
-    var menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-};
-// Smooth scroll for nav links and hero buttons
-document.querySelectorAll('.nav-link, .hero-scroll').forEach(link => {
-    link.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-});
 
-function setLanguage(lang) {
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
-        }
-    });
-    // Set dropdowns
-    document.getElementById('lang-select').value = lang;
-    document.getElementById('lang-select-mobile').value = lang;
-}
+                </form>
+    </section>
 
-document.getElementById('lang-select').addEventListener('change', function() {
-    setLanguage(this.value);
-});
-document.getElementById('lang-select-mobile').addEventListener('change', function() {
-    setLanguage(this.value);
-});
-
-// Set default language
-setLanguage('EN');
-</script>
 
         <!-- Footer -->
         <footer class="bg-white border-t border-gray-200 py-6 mt-12">
@@ -401,9 +366,19 @@ setLanguage('EN');
                     <a href="https://www.linkedin.com/in/clement-v2/" target="_blank" rel="noopener" class="text-gray-400 hover:text-blue-700 transition"><i class="fab fa-linkedin text-xl"></i></a>
                 </div>
             </div>
-            <script>
-                document.getElementById('footer-year').textContent = new Date().getFullYear();
-            </script>
         </footer>
+
+        <script>
+            document.getElementById('footer-year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Scripts segmentés -->
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+        <script type="module" src="./scripts/nav.js"></script>
+        <script type="module" src="./scripts/contact.js"></script>
+        <script type="module" src="./scripts/animations.js"></script>
+        <script type="module" src="./scripts/skills.js"></script>
+        <script type="module" src="./scripts/projects.js"></script>
+        <script type="module" src="./scripts/footer.js"></script>
 </body>
 </html>
