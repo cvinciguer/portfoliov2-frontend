@@ -208,7 +208,7 @@ export const translations = {
     "hero.cta": "Ver proyectos",
     "hero.contact": "Contáctame",
     "hero.based": "Basado en",
-    "hero.location": "Marseille, France",
+    "hero.location": "Marsella, Francia",
     "about.title": "Sobre mí",
     "about.story.title": "Mi historia",
     "about.story.desc":
