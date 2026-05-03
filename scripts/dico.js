@@ -17,7 +17,7 @@ export const translations = {
     "hero.cta": "View Projects",
     "hero.contact": "Contact Me",
     "hero.based": "Based in",
-    "hero.location": "Cali, Colombia",
+    "hero.location": "Marseille, France",
     // About
     "about.title": "About Me",
     "about.story.title": "My Story",
@@ -116,7 +116,7 @@ export const translations = {
     "hero.cta": "Voir les projets",
     "hero.contact": "Me contacter",
     "hero.based": "Basé à",
-    "hero.location": "Cali, Colombie",
+    "hero.location": "Marseille, France",
     "about.title": "À propos de moi",
     // (removed duplicate, only keep correct FR translation above)
     "about.story.title": "Mon parcours",
@@ -208,7 +208,7 @@ export const translations = {
     "hero.cta": "Ver proyectos",
     "hero.contact": "Contáctame",
     "hero.based": "Basado en",
-    "hero.location": "Cali, Colombia",
+    "hero.location": "Marseille, France",
     "about.title": "Sobre mí",
     "about.story.title": "Mi historia",
     "about.story.desc":
